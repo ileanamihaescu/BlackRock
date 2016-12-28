@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+		<!-- include font awesome icons fonts -->
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+		<!-- include jQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+		<script src="js/Chart.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>DuckIT</title>
+    </head>
+    <body>
+        <div id="app">
+            
+            <div id="side-menu">
+				<ul>
+					<li data-action="close-menu">
+						<i class="fa fa-times"></i> Close Menu
+					</li>
+
+					<li data-action="close-menu">
+						<a href="#about">
+							<i class="fa fa-wechat"></i> About
+						</a>
+					</li>
+
+					<li data-action="close-menu">
+						<a href="#requests">
+							<i class="fa fa-newspaper-o"></i> Requests
+						</a>
+					</li>
+
+					<li data-action="close-menu">
+						<a href="#chart">
+							<i class="fa fa-area-chart"></i> Chart
+						</a>
+					</li>
+
+					<li data-action="close-menu">
+						<a href="#statistics">
+							<i class="fa fa-wrench"></i> Statistics
+						</a>
+					</li>
+
+					<li data-action="close-menu">
+						<a href="#help">
+							<i class="fa fa-wrench"></i> Help
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<div id="content">
+				<div id="header">
+					<h1>DuckIT</h1>
+					<button class="menu-toggle" data-action="toggle-menu"><i class="fa fa-bars"></i></button>
+				</div>
+
+				<div data-role="page" id="about">
+					<div class="border">
+				<p>We have developed some programmes in order to solve our tasks:</p>
+				<p>Apy.py  - it's a phyton script that takes png faxes from the site and saves them into a folder. Then iterate through every fax and send a request toGoogle Vision API.(This API permitted us sending a limited number of requests and as a result we have tried out application on a smaller input).The response to every picture request was displayed into a separate file.(the selection of keywords was made in java)</p>
+				<p>BLK  - we created a database with informations about the clients, funds, transactions and then we connected it with our java project. Usig JPA and the RMI method, we managed to transfer the data from the client to the server and then to the database. The data from the phyton script was selected and introduced to an output file that we used for our database.</p>
+				<p>HackSociety - it's a PhoneGap application that consists of html, css and js files in order to display all the information extracted in the above programmes.We have tried to make a Homepage with a menu that consisted of 5 fields : about, requests, chart, statistics, help.The request button take the employee into the world of faxes. He can now "talk the Tinder language". If the signature is a true one then, it should be"match" and the fax should be introduced into the database. Else, the negative response will arrive to the one who wanted to put money in.  The chart and statistics buttons should display some information about theinternal economy.</p>
+
+				</div>
+				</div>
+
+				<div data-role="page" id="requests">
+					<div class="align">
+						<br>
+						<br>
+						<div>
+							<img src="takemymoney.jpg" id="money" width="300">
+						</div>
+						<br>
+					</div>
+					<a href="#getstarted">
+						<div id="thestart" class="buttonStyle">
+								<button id="money" class="btn raised btn-blue" ">Get Started</button>
+						</div>
+					</a>
+
+				</div>
+
+				<div data-role="page" id="getstarted">
+						<div class="align">
+						<button id="buttonLeft" class="btn raised btn-blue" ">Left</button>
+						<a href="#next1">
+							<button id="buttonRight" class="btn raised btn-blue" ">Right</button>
+						</a>
+						</div>
+						<div class="align">
+						<img align="center" src="1.jpg" width="700">
+						</div>
+				</div>
+
+				<div data-role="page" id="next1">
+						<div class="align">
+						<button id="buttonLeft" class="btn raised btn-blue" ">Left</button>
+						<a href="#next2">
+							<button id="buttonRight" class="btn raised btn-blue" ">Right</button>
+						</a>
+						</div>
+						<div class="align">
+						<img align="center" src="2.jpg" width="700">
+						</div>
+				</div>
+
+				<div data-role="page" id="next2">
+						<div class="align">
+						<button id="buttonLeft" class="btn raised btn-blue" ">Left</button>
+						<a href="#next3">
+							<button id="buttonRight" class="btn raised btn-blue" ">Right</button>
+						</a>
+						</div>
+						<div class="align">
+						<img align="center" src="3.jpg" width="700">
+						</div>
+				</div>				
+
+				<div data-role="page" id="next3">
+						<div class="align">
+						<button id="buttonLeft" class="btn raised btn-blue" ">Left</button>
+						<a href="#next4">
+							<button id="buttonRight" class="btn raised btn-blue" ">Right</button>
+						</a>
+						</div>
+						<div class="align">
+						<img align="center" src="4.jpg" width="700">
+						</div>
+				</div>
+
+				<div data-role="page" id="next4">
+						<div class="align">
+						<button id="buttonLeft" class="btn raised btn-blue" ">Left</button>
+						<a href="#next5">
+							<button id="buttonRight" class="btn raised btn-blue" ">Right</button>
+						</a>
+						</div>
+						<div class="align">
+						<img align="center" src="5.jpg" width="700">
+						</div>
+				</div>
+
+				<div data-role="page" id="next5">
+						<div class="align">
+						<button id="buttonLeft" class="btn raised btn-blue" ">Left</button>
+						<a href="#next6">
+							<button id="buttonRight" class="btn raised btn-blue" ">Right</button>
+						</a>
+						</div>
+						<div class="align">
+						<img align="center" src="6.jpg" width="700">
+						</div>
+				</div>
+
+						<div data-role="page" id="next6">
+						<div class="align">
+						<button id="buttonLeft" class="btn raised btn-blue" ">Left</button>
+						<a href="#next7">
+							<button id="buttonRight" class="btn raised btn-blue" ">Right</button>
+						</a>
+						</div>
+						<div class="align">
+						<img align="center" src="7.jpg" width="700">
+						</div>
+				</div>
+
+				<div data-role="page" id="statistics">
+
+				<h1 align="center"> Statistics </h1>
+
+				</div>
+
+				<div data-role="page" id="help">
+
+				</div>
+	
+						
+			</div>
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
+</html>
